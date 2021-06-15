@@ -32,3 +32,46 @@ Sub FullScreen()
         .DisplayGridlines = False
     End With
 End Sub       
+
+
+Sub NormalScreen()
+'
+' NormalScreen Macro
+'
+' Atalho do teclado: Ctrl+Shift+Z
+'if
+'Reexibe os menus
+        Application.ExecuteExcel4Macro "SHOW.TOOLBAR(""Ribbon"",True)"
+        
+        'Reexibir a barra de fórmulas
+        Application.DisplayFormulaBar = True
+        
+        'Reexibir a barra de status, disposta ao final da planilha
+        Application.DisplayStatusBar = True
+        
+        'Reexibir o cabeçalho da Pasta de trabalho
+        ActiveWindow.DisplayHeadings = True
+        
+        'Retornar o nome do Excel
+        Application.Caption = ""
+        
+        With ActiveWindow
+            'Reexibir barra horizontal
+            .DisplayHorizontalScrollBar = True
+            
+            'Reexibir barra vertical
+            .DisplayVerticalScrollBar = True
+            
+            'Reexibir guias das planilhas
+            .DisplayWorkbookTabs = True
+            
+            'Reexibir os títulos de linha e coluna
+            .DisplayHeadings = True
+            
+            'Reexibir valores zero na planilha
+            .DisplayZeros = True
+            
+            'Reexibir as linhas de grade da planilha
+            .DisplayGridlines = False
+        End With
+End Sub
